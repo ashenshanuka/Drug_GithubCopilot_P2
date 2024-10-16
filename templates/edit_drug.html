@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Edit Drug</h1>
+<form method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ drug[1] }}" required>
+    <label for="stock_level">Stock Level:</label>
+    <input type="number" id="stock_level" name="stock_level" value="{{ drug[2] }}" required>
+    <label for="cost">Cost:</label>
+    <input type="number" step="0.01" id="cost" name="cost" value="{{ drug[3] }}" required>
+    <label for="shelf_life">Shelf Life:</label>
+    <input type="date" id="shelf_life" name="shelf_life" value="{{ drug[4] }}" required>
+    <button type="submit">Update Drug</button>
+</form>
+{% endblock %}
